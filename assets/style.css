@@ -7,6 +7,7 @@ body {
   font-family: sans-serif;
   margin: auto;
   height: 100%;
+  font-family: Roboto, sans-serif;
 }
 
 body {
@@ -18,7 +19,7 @@ h1 {
 }
 
 .icon {
-  border: 2px dashed;
+  border: 1px dashed;
   width: 24px;
   height: 24px;
   display: inline-block;
@@ -33,11 +34,34 @@ h1 {
   height: 100vh;
   padding: 10px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media only screen and (min-width: 768px) {
+  .iframes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .iframes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.iframe-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .iframe {
-  height: 100%;
-  width: 100%;
+  flex-grow: 1;
+}
+
+.link {
+  padding: 10px 10px 20px;
 }
