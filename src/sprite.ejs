@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>SVG sprite performance comparison</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    style="position: absolute; width: 0; height: 0" aria-hidden="true">
+    <defs>
+      <% for(var i=0; i < icons.length; i++) { %>
+        <%= icons[i].symbolContents %>
+      <% } %>
+    </defs>
+  </svg>
+  <h1>Sprite embedded server side</h1>
+  <p>This paragraph contains text above the fold and should be visible asap.</p>
+  <% for(var i=0; i < icons.length; i++) { %>
+    <svg viewBox="0 0 24 24" width="24" height="24" class="icon">
+      <use xlink:href="#<%= icons[i].pathName %>" />
+    </svg>
+  <% } %>
+</body>
+
+</html>

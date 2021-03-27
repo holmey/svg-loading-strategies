@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>SVG sprite performance comparison</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>Icons Embedded server side</h1>
+  <p>This paragraph contains text above the fold and should be visible asap.</p>
+  <% for(var i=0; i < icons.length; i++) { %>
+    <div class="icon"><%= icons[i].svgContents %></div>
+  <% } %>
+</body>
+
+</html>

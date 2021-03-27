@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  margin: auto;
+  height: 100%;
+}
+
+body {
+  padding: 10px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.icon {
+  border: 2px dashed;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.iframes {
+  height: 100vh;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.iframe {
+  height: 100%;
+  width: 100%;
+}

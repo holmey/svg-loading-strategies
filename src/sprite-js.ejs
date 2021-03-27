@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>SVG sprite performance comparison</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Sprite lazy loaded via JS</h1>
+    <p>This paragraph contains text above the fold and should be visible asap.</p>
+    <% for(var i=0; i < icons.length; i++) { %>
+      <svg viewBox="0 0 24 24" width="24" height="24" class="icon">
+        <use xlink:href="#<%= icons[i].pathName %>" />
+      </svg>
+   <% } %>
+  </body>
+</html>
