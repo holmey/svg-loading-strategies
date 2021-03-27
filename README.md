@@ -1,4 +1,4 @@
-#svg-loading-strategies
+# svg-loading-strategies
 
 Comparsion between SVG Icon loading strategies.
 The results may differ when using more, less, smaller or bigger icons. Even combinations of different strategies e.g. using single embeds for big SVGs and sprites for small icons have different results.
@@ -11,9 +11,10 @@ Sometimes even using PNG files could make more sense.
 Loading 100 SVG Icons from the [google Material design library](https://github.com/google/material-design-icons/) with different strategies.
 There is an index.html with each strategy shown in a separate iframe. Because of network concurrency i would not recommend to use this for a comparison. If you want to get an impression on how the loading strategy will affect the loading behaviour in your browser use the separate scenarios.
 
-##Strategies
+## Strategies
 
-###1. Lazy embeds
+### 1. Lazy embeds
+
 In this strategy, there are placeholders in the body and a JavaScript will load each icon separately and embed its content to the DOM.
 
 **Before initialization**
@@ -35,7 +36,8 @@ In this strategy, there are placeholders in the body and a JavaScript will load 
 | Works asyncronously                                                                       | Lots of network requests.                                                                                                                                       |
 | More granular progressive loading because of the size of the assets compared to a sprite. |                                                                                                                                                                 |
 
-###2. Lazy images
+### 2. Lazy images
+
 Simple image tag with lazy loading attribute.
 
 ```html
@@ -50,7 +52,8 @@ Simple image tag with lazy loading attribute.
 | More granular progressive loading because of the size of the assets compared to a sprite.                              |                                       |
 | No JavaScript needed for modern browsers with [natively supported lazy loading](https://caniuse.com/loading-lazy-attr) |                                       |
 
-###3. Embeds
+### 3. Embeds
+
 Embed each icon when needed.
 
 ```html
@@ -64,7 +67,8 @@ Embed each icon when needed.
 | Easy to implement.                                         | Server has more work to do before cache when compressing the same icon for lots of pages again and again.                                                                            |
 | No JavaScript needed.                                      |                                                                                                                                                                                      |
 
-###4. Sprite loaded and embedded with JavaScript
+### 4. Sprite loaded and embedded with JavaScript
+
 Sprite is loaded asynchronously and embedded to the DOM by JavaScript
 
 **Sprite after embedded by JS in body**
@@ -104,7 +108,8 @@ Sprite is loaded asynchronously and embedded to the DOM by JavaScript
 | Efficient Caching (server side) since the sprite is build and compressed once. Clients will request the same sprite for each page. | Each icon is loaded even when not needed on the current page.                                                                                                                                                                |
 | Works asynchronously.                                                                                                              | Browser has to work a lot since after download it has to parse the JS containing the SVG-Sprite and manipulate the DOM. (maybe loading the SVG from a separate SVG file and not from a JavaScript file is a better solution) |
 
-###5. Sprite embedded server side
+### 5. Sprite embedded server side
+
 Sprite is embedded server side and is delivered with each HTML file.
 The HTML should look the same as in strategy 4 when loading with JavaScript.
 | Pros | Cons |
