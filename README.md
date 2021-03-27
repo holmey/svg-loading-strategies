@@ -3,14 +3,14 @@
 Comparsion between SVG Icon loading strategies.
 The results may differ when using more, less, smaller or bigger icons. Even combinations of different strategies e.g. using single embeds for big SVGs and sprites for small icons have different results.
 There also are some benefits in lazy loading single files only when needed (in viewport) that are not covered by the results (only described in pros/cons).
-The test assumes theat there are efficient compression strategies for the HTML and Asset Files e.g. gzip or [Brotli](https://github.com/google/brotli). It also assumes the page is served via HTTP/2 so [multiplexing](https://developers.google.com/web/fundamentals/performance/http2#request_and_response_multiplexing) is enabled.
+The test assumes efficient compression strategies for the HTML and Asset Files e.g. gzip or [Brotli](https://github.com/google/brotli). It also assumes the page is served via HTTP/2 so [multiplexing](https://developers.google.com/web/fundamentals/performance/http2#request_and_response_multiplexing) is enabled.
 [Preloading content](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content) also could have a positive effect.
 Sometimes even using PNG files could make more sense.
 
 ## Test setup
 
 Loading 100 SVG Icons from the [google Material design library](https://github.com/google/material-design-icons/) with different strategies.
-There is an index.html with each strategy shown in a separate iframe. Because of network concurrency i would not recommend to use this for a comparison. If you want to get an impression on how the loading strategy will affect the loading behaviour in your browser use the separate scenarios.
+There is an index.html with each strategy shown in a separate iframe. Because of network concurrency i would not recommend to use this for comparison reasons. If you want to get an impression on how the loading strategy will affect the loading behaviour in your browser use the separate scenarios.
 
 ## Demo
 
@@ -149,6 +149,8 @@ Embed each icon when needed.
 ```html
 <svg><path d="M0 0h24v24H0z"></path></svg>
 ```
+
+\* When embedding the 100 icons 3 times andthe transferred data increased from 22 to 56kB and when using 6 times (600 icons) the transferred data increased from 22 to 111kB.
 
 | Pros                                                       | Cons                                                                                                                                                                                 |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
