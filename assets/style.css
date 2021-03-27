@@ -60,8 +60,10 @@ h1 {
 
 .iframe {
   flex-grow: 1;
+  border: 1px solid;
 }
 
 .link {
   padding: 10px 10px 20px;
+  color: navy;
 }
