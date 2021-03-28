@@ -187,5 +187,6 @@ For some reason Netlify, where the demo is hosted, does not use Brotli to compre
 ## Verdict
 
 There is no recommendation i wanted to give in the first place. I just wanted to know if there are major differences since we evaluated different solutions to load SVG files for an upcoming project.
-There are way to many parameters to consider before deciding for one solution as i mentioned in the intro.
+There are way to many parameters to consider before deciding for one solution as i mentioned in the intro. Even compression time on the server could be a valid parameter.
+
 Using the JavaScript Sprite strategy seemed to be the go-to solution for a lot of our projects since there are handy loaders for Webpack doing the work for you. But to avoid using JavaScript if there are other possibilities is often something to consider. Especially when thinking about performance since the Browser always has to [work a little more](https://v8.dev/blog/cost-of-javascript-2019). That also should be the reason for the worst "Totel Blocking Time" and "Time to Interactive" for the SVG Sprite via JavaScript strategy.
