@@ -173,16 +173,16 @@ For some reason Netlify, where the demo is hosted, does not use Brotli to compre
 
 ### Lighthouse CLI median (50 tests)
 
-|                                                                                                       | Lazy Embeds | Images | Sprite Server Side | Sprite JS      | Embeds     |
-| ----------------------------------------------------------------------------------------------------- | ----------- | ------ | ------------------ | -------------- | ---------- |
-| [Performance score](https://developers.google.com/speed/docs/insights/v5/about)                       | 100         | 100    | 100                | 100            | 100        |
-| [First Contentful Paint](https://web.dev/first-contentful-paint/)                                     | 1.012s      | 1.246s | 1.040s             | **857ms**      | 1.030s     |
-| [Speed Index](https://web.dev/speed-index/)                                                           | 1.026s      | 1.596s | 1.040s             | **883ms**      | 1.030s     |
-| [Largest Contentful Paint](https://web.dev/lcp/)                                                      | 1.162s      | 1.246s | 1.040s             | 1.247s         | **1.030s** |
-| [Time to Interactive](https://web.dev/interactive/)                                                   | **1.012s**  | 1.246s | 1.055s             | 1.247s         | 1.030s     |
-| [Total Blocking Time](https://web.dev/lighthouse-total-blocking-time/)                                | 0           | 0      | 0                  | 100ms :turtle: | 0          |
-| [DOMContentLoaded Event](https://developer.mozilla.org/de/docs/Web/API/Window/DOMContentLoaded_event) | 248ms       | 256ms  | **209ms**          | 339ms          | 213ms      |
-| [Load Event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event)                      | 310ms       | 535ms  | **225ms**          | 347ms          | 251ms      |
+|                                                                                                       | Lazy Embeds      | Images         | Sprite Server Side | Sprite JS       | Embeds           |
+| ----------------------------------------------------------------------------------------------------- | ---------------- | -------------- | ------------------ | --------------- | ---------------- |
+| [Performance score](https://developers.google.com/speed/docs/insights/v5/about)                       | 100              | 100            | 100                | 100             | 100              |
+| [First Contentful Paint](https://web.dev/first-contentful-paint/)                                     | 1.012s           | 1.246s         | 1.040s             | 857ms :running: | 1.030s           |
+| [Speed Index](https://web.dev/speed-index/)                                                           | 1.026s           | 1.596s         | 1.040s             | 883ms :running: | 1.030s           |
+| [Largest Contentful Paint](https://web.dev/lcp/)                                                      | 1.162s           | 1.246s         | 1.040s             | 1.247s :turtle: | 1.030s :running: |
+| [Time to Interactive](https://web.dev/interactive/)                                                   | 1.012s :running: | 1.246s         | 1.055s             | 1.247s :turtle: | 1.030s           |
+| [Total Blocking Time](https://web.dev/lighthouse-total-blocking-time/)                                | 0                | 0              | 0                  | 100ms :turtle:  | 0                |
+| [DOMContentLoaded Event](https://developer.mozilla.org/de/docs/Web/API/Window/DOMContentLoaded_event) | 248ms            | 256ms          | 209ms :running:    | 339ms :turtle:  | 213ms            |
+| [Load Event](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event)                      | 310ms            | 535ms :turtle: | 225ms :running:    | 347ms           | 251ms            |
 
 ## Verdict
 
