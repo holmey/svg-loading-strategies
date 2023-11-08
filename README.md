@@ -9,7 +9,7 @@ Sometimes even using PNG files could make more sense.
 
 ## Demo
 
-<a href="https://svg-loading-strategies.netlify.app/index.htm" target="_blank">https://svg-loading-strategies.netlify.app/index.htm</a>
+<a href="https://svg-loading-strategies.vercel.app" target="_blank">https://svg-loading-strategies.vercel.app</a>
 
 ![](demo.gif)
 
